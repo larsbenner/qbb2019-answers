@@ -25,4 +25,4 @@ tail -10 k4me3.annot.bed > k4me3.annot.last.bed
 rm temp.bed
 
 rm *annot.most.bed
-bedtools coverage -a k4me3.annot.bed -b /Users/cmdb/qbb2019-answers/results/SRR072893.bam | sort -k6 | tail -10 > k4me3.annot.most.bed
+bedtools coverage -a k4me3.annot.bed -b /Users/cmdb/qbb2019-answers/results/SRR072893.bam | sort -k6 -n | tail -10 > k4me3.annot.most.bed
