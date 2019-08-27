@@ -1,0 +1,8 @@
+*.gtf
+*.bam
+*.sam
+*.bai
+
+genomes 
+rawdata
+results
