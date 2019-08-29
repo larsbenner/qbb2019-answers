@@ -54,6 +54,7 @@ for ident, query_sequence in query_reader:
                             extend_right = False
                     else:
                         #this is where I add to my dictionary the extension
+                        final_dict[extended_kmer].append(ident, i)]
                         break
                     if (j+k == len_target_seq) or (i+k == query_target_sequence):
                         extend_right = False
