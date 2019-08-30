@@ -20,10 +20,12 @@ for i, line in enumerate(open(sys.argv[1]) ):
     if fields[2] == "+":
         promter_left =  int(fields[3])-500
         promoter_right = int(fields[3])+500
+        promoter_left = max(promoter_left, 1)
     else:
         fields[2] == "-"
-        promoter_left = int(fields[4]) +500
-        promoter_right = int(fields[4]) - 500
+        promoter_left = int(fields[4]) -500
+        promoter_right = int(fields[4]) + 500
+        promoter_left = max(promoter_left, 1)
         print(fields[1], promoter_left, promoter_right,fields[5], sep="\t")
         
         
