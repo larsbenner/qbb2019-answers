@@ -63,7 +63,7 @@ for ident, target_seq in target_reader:
 #print(target_dict)
 #print(target_kmer_dict)
 query_dict = {}
-
+#searches for kmers and extends if match
 final_dict = {}
 for ident, query_seq in query_reader:
     query_seq = query_seq.upper()
@@ -91,44 +91,7 @@ for key in final_dict:
                         
                         
                         
-                    #
-                    # if extend_right:
-                    #
-                    #         #print(kmer, chrom_dict[position[0]][position[1] : position[1]+length], query_seq[i : i + length])
-                    #
-                    #         extended_kmer += query_seq[i : i +length]
-                    #     else:
-                    #
-                    #
-                    # else:
-                    #     final_dict[extended_kmer].append(length)
-
-                    #if ([position[1] : position[1]+length == len_target_seq or i + length == len_query_seq:
-                        #extend_right = False
-
-        
-        # if kmer in target_dict:
-        #     for ident, j in target_dict[kmer]:
-        #         target_seq = target_sequence[ident]
-        #         len_target_seq = len(target_seq)
-        #         query_target_seq = len(query_sequence)
-        #         extend_right = True
-        #         extended_kmer = kmer
-        #         while True:
-        #             if extend_right:
-        #                 #verify these are right
-        #                 if query_sequence[i+k+1] == target_seq[j+k+1]:
-        #                     i += 1
-        #                     j += 1
-        #                     extended_kmer += query_sequence[i+k+1]
-        #                 else:
-        #                     extend_right = False
-        #             else:
-        #                 #this is where I add to my dictionary the extension
-        #                 final_dict[extended_kmer].append(ident, i)]
-        #                 break
-        #             if (j+k == len_target_seq) or (i+k == query_target_sequence):
-        #                 extend_right = False
+              
 #
 
 
