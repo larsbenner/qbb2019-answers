@@ -56,5 +56,5 @@ plt.plot(x, y_skew, color='orange', label='skewed distribution')
 plt.plot(x, y, color='green', label='normaldistribution')
 plt.legend(loc='upper left')
 
-fig.savefig("fpkms.png")
+fig.savefig("fpkms_final.png")
 plt.close(fig)
