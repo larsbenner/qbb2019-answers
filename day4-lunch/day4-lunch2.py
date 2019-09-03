@@ -29,16 +29,29 @@ df = pd.DataFrame(fpkm)
 print(df)
 print(type(df))
 
-fig,ax = plt.subplots()
-ax.plot(float(df.loc[:,1]),float(df.loc[:,1]), color="red" )
-fig.savefig("FPKM Comparison")
-plt.close(fig)
 
-#DataFrame.plot.scatter(x,y)
+A = np.log2(df.loc[:,0]+1)
+B = np.log2(df.loc[:,1] + 1)
+
+fig, ax = plt.subplots()
+ax.scatter( A, B )
+# ax.plot( [0, 10], [-2, 2] )
+fig.suptitle("FPKM Comparison")
+ax.set_xlabel("Sample A log2 FPKM Values")
+ax.set_ylabel("Sample B log2 FPKM Values")
+fig.savefig( "MA_plot.png" )
+plt.close( fig ) 
+
 
 # fig,ax = plt.subplots()
-# ax.scatter()
-#
-# ax.plot([0,40], [0,20000], color="red" )
-# fig.savefig("comparison of transcripts")
+# ax.plot(x=float(df.loc[:,0]), y=float(df.loc[:1]), color="red" )
+# fig.savefig("FPKM Comparison.png")
 # plt.close(fig)
+# #DataFrame.plot.scatter(x,y)
+#
+# # fig,ax = plt.subplots()
+# # ax.scatter()
+# #
+# # ax.plot([0,40], [0,20000], color="red" )
+# # fig.savefig("comparison of transcripts")
+# # plt.close(fig)
