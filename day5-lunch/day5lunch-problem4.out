@@ -1,0 +1,78 @@
+h3k4me1    1.610536
+dtype: float64
+                                 OLS Regression Results                                
+=======================================================================================
+Dep. Variable:                   fpkm   R-squared (uncentered):                   0.005
+Model:                            OLS   Adj. R-squared (uncentered):              0.005
+Method:                 Least Squares   F-statistic:                              91.68
+Date:                Thu, 05 Sep 2019   Prob (F-statistic):                    1.15e-21
+Time:                        00:43:32   Log-Likelihood:                     -1.0277e+05
+No. Observations:               17441   AIC:                                  2.055e+05
+Df Residuals:                   17440   BIC:                                  2.056e+05
+Df Model:                           1                                                  
+Covariance Type:            nonrobust                                                  
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+h3k4me1        1.6105      0.168      9.575      0.000       1.281       1.940
+==============================================================================
+Omnibus:                    40013.541   Durbin-Watson:                   1.822
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):        449271351.624
+Skew:                          22.125   Prob(JB):                         0.00
+Kurtosis:                     788.029   Cond. No.                         1.00
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+h3k4me3    0.722097
+dtype: float64
+                                 OLS Regression Results                                
+=======================================================================================
+Dep. Variable:                   fpkm   R-squared (uncentered):                   0.055
+Model:                            OLS   Adj. R-squared (uncentered):              0.055
+Method:                 Least Squares   F-statistic:                              1011.
+Date:                Thu, 05 Sep 2019   Prob (F-statistic):                   9.63e-216
+Time:                        00:43:32   Log-Likelihood:                     -1.0233e+05
+No. Observations:               17441   AIC:                                  2.047e+05
+Df Residuals:                   17440   BIC:                                  2.047e+05
+Df Model:                           1                                                  
+Covariance Type:            nonrobust                                                  
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+h3k4me3        0.7221      0.023     31.798      0.000       0.678       0.767
+==============================================================================
+Omnibus:                    40251.307   Durbin-Watson:                   1.882
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):        482327787.718
+Skew:                          22.425   Prob(JB):                         0.00
+Kurtosis:                     816.452   Cond. No.                         1.00
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+h3k9me3   -4.144994
+dtype: float64
+                                 OLS Regression Results                                
+=======================================================================================
+Dep. Variable:                   fpkm   R-squared (uncentered):                   0.020
+Model:                            OLS   Adj. R-squared (uncentered):              0.020
+Method:                 Least Squares   F-statistic:                              356.6
+Date:                Thu, 05 Sep 2019   Prob (F-statistic):                    9.53e-79
+Time:                        00:43:32   Log-Likelihood:                     -1.0264e+05
+No. Observations:               17441   AIC:                                  2.053e+05
+Df Residuals:                   17440   BIC:                                  2.053e+05
+Df Model:                           1                                                  
+Covariance Type:            nonrobust                                                  
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+h3k9me3       -4.1450      0.220    -18.883      0.000      -4.575      -3.715
+==============================================================================
+Omnibus:                    39873.760   Durbin-Watson:                   1.847
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):        443266971.911
+Skew:                          21.934   Prob(JB):                         0.00
+Kurtosis:                     782.770   Cond. No.                         1.00
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
