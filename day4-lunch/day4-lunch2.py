@@ -6,8 +6,6 @@ import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
-import numpy as np
-from numpy.polynomial.polynomial import polyfit
 
 #specify row names with index column t_name to makes ure ur comparing same tx
 #split string in sys.argv1 -2 is directory name
@@ -32,24 +30,28 @@ print(df)
 print(type(df))
 
 
-A = np.log2(df.iloc[:,0]+1)
-B = np.log2(df.iloc[:,1]+1)
-#
+A = np.log2(df.loc[:,0]+1)
+B = np.log2(df.loc[:,1] + 1)
+
 fig, ax = plt.subplots()
-ax.scatter(A, B, color='blue', alpha=.1 )
-
-z=np.polyfit(A, B, 3)
-f = np.poly1d(z)
-
-# calculate new x's and y's
-x_new = np.linspace(0,10 , 50)
-y_new = f(x_new)
-
-
-plt.plot(A[0],A[-1], x_new, y_new)
-
-fig.suptitle("FPKM Comparisons")
+ax.scatter( A, B )
+# ax.plot( [0, 10], [-2, 2] )
+fig.suptitle("FPKM Comparison")
 ax.set_xlabel("Sample A log2 FPKM Values")
 ax.set_ylabel("Sample B log2 FPKM Values")
-fig.savefig( "FinalScatter1.png" )
-plt.close( fig )
+fig.savefig( "MA_plot.png" )
+plt.close( fig ) 
+
+
+# fig,ax = plt.subplots()
+# ax.plot(x=float(df.loc[:,0]), y=float(df.loc[:1]), color="red" )
+# fig.savefig("FPKM Comparison.png")
+# plt.close(fig)
+# #DataFrame.plot.scatter(x,y)
+#
+# # fig,ax = plt.subplots()
+# # ax.scatter()
+# #
+# # ax.plot([0,40], [0,20000], color="red" )
+# # fig.savefig("comparison of transcripts")
+# # plt.close(fig)
