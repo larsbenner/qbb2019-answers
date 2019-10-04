@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 chrom_tup=[]
 chr_length = {}
 cc_dict = {}
-chr_list = set()
+chr_list = []
 
 
 for file_name in os.listdir(os.getcwd()):
@@ -21,10 +21,12 @@ for file_name in os.listdir(os.getcwd()):
                continue
            p_value = float(line.rstrip().split()[-1])
            chrom = line.rstrip().split()[0]
-           chr_list.add(chrom)
+           #chr_list.add(chrom)
            #position = line.rstrip().split()[2]
            chrom_tup.append((chrom, -np.log10(p_value)))
-       
+           if chrom not in chr_list:
+               chr_list.append(chrom)
+               
            #chr_length[chrom]= position
            
     chr_color = list(chr_list)
@@ -38,6 +40,8 @@ for file_name in os.listdir(os.getcwd()):
         for point in chrom_tup:
             if point[0] == chr:
                 ax.scatter(start_point, point[1], color = cc_dict[point[0]], s = 2)
+                if point[1] > 5:
+                    ax.scatter(start_point, point[1], color = "red", s = 2)    
                 start_point += 1
              # elif point[0] != chr:
    #                 offset = chr_length[chr]
