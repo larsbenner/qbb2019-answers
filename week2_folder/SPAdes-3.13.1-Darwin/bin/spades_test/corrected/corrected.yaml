@@ -1,0 +1,8 @@
+- "left reads":
+  - "/Users/cmdb/qbb2019-answers/week2_folder/SPAdes-3.13.1-Darwin/bin/spades_test/corrected/ecoli_1K_1.fq.00.0_0.cor.fastq.gz"
+  "orientation": "fr"
+  "right reads":
+  - "/Users/cmdb/qbb2019-answers/week2_folder/SPAdes-3.13.1-Darwin/bin/spades_test/corrected/ecoli_1K_2.fq.00.0_0.cor.fastq.gz"
+  "single reads":
+  - "/Users/cmdb/qbb2019-answers/week2_folder/SPAdes-3.13.1-Darwin/bin/spades_test/corrected/ecoli_1K__unpaired.00.0_0.cor.fastq.gz"
+  "type": "paired-end"
