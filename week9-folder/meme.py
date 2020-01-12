@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-## this is for ploting the motifs within the binding sites
+## this is for graphing motifs in binding sites
 
 import sys
 import matplotlib.pyplot as plt
@@ -17,7 +17,7 @@ for line in motif:
     strand = line.rstrip("\n").split()[6]
     #print (strand)
     motif_start = int(line.split()[3])
-    motif_end = int(line.split()[4]) -1#minus for offset
+    motif_end = int(line.split()[4]) -1
     #print(strand, motif_start, motif_end)
 
     if strand == "+" in line:
@@ -51,5 +51,4 @@ ax.set_title("Histogram")
 fig.savefig("hist.png")
 plt.close(fig)
 #print(locations)
-    #print (length)
     
